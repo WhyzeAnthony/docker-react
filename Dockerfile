@@ -20,7 +20,8 @@ RUN ["npm", "run", "build"]
 
 # Load base nginx image
 FROM nginx
-
+# Tells AWS Elastic Beanstalk what port to map incoming traffic to
+EXPOSE 80
 # Copy the build files from the builder (1st step in build process)
 COPY --from=builder /app/build /usr/share/nginx/html
 
