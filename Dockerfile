@@ -16,7 +16,7 @@ RUN npm install
 COPY ./ ./
 
 # Tell the image what to do when it starts as a container
-RUN ["npm", "run", "build"]
+RUN npm run build
 
 # Load base nginx image
 FROM nginx
