@@ -13,7 +13,7 @@ COPY ./package.json ./
 RUN npm install
 
 # Copy all other container files
-COPY . .
+COPY ./ ./
 
 # Tell the image what to do when it starts as a container
 RUN ["npm", "run", "build"]
